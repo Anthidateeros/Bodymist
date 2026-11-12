@@ -1,0 +1,636 @@
+/* ==========================================================================
+   Body Scent - Luxury Minimalist Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&family=Prompt:wght@300;400;500&display=swap');
+
+:root {
+  /* Core Palette: White - Cream - Deep Beige */
+  --bg-primary: #FAF8F5;      /* ครีมอ่อนโปร่งตา */
+  --bg-secondary: #F2EDE4;    /* เบจอ่อนสำหรับสลับเลเยอร์ */
+  --bg-surface: #FFFFFF;      /* ขาวบริสุทธิ์สำหรับการ์ด/โมดอล */
+  
+  /* Typography Colors */
+  --text-primary: #262320;    /* น้ำตาลเข้มเกือบดำ นุ่มตากว่าดำสนิท */
+  --text-secondary: #68625C;  /* เทาอมน้ำตาลสำหรับคำอธิบาย */
+  --text-muted: #9A938B;      /* เทาเบจสำหรับรายละเอียดรอง */
+
+  /* Accents & Borders */
+  --accent-bronze: #A88B68;   /* ทองบรอนซ์อ่อน */
+  --accent-bronze-hover: #8E7352;
+  --border-subtle: #E4DDD3;   /* เส้นขอบบางสีเบจเข้ม */
+  --border-dark: #3D3833;     /* เส้นขอบเข้มนุ่มตาสำหรับปุ่ม */
+
+  /* Mood Subtle Accents (แตะเบาๆ เฉพาะจุด) */
+  --mood-fresh: #2E5A44;      /* เขียวเข้ม */
+  --mood-sweet: #7A5C82;      /* ม่วงกลาง */
+  --mood-confident: #2C3E50;  /* น้ำเงินเทาเข้ม */
+  --mood-romance: #B5656A;    /* แดงอ่อน */
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing & Layout */
+  --container-max: 1200px;
+  --section-padding: 6rem 2rem;
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==========================================================================
+   Typography Hierarchy
+   ========================================================================== */
+h1, h2, h3, h4, .brand-logo, .serif-text {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 0.03em;
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-size: 1.45rem;
+  letter-spacing: 0.01em;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent-bronze);
+  margin-bottom: 0.75rem;
+}
+
+/* ==========================================================================
+   Layout Containers & Spacing
+   ========================================================================== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.section-alt {
+  background-color: var(--bg-secondary);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 4.5rem;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.25rem 2rem;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 1.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-bronze);
+  transition: var(--transition-smooth);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Buttons (Thin Borders, Soft Dark Tones)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-dark);
+  background-color: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-bronze);
+  border-color: var(--accent-bronze);
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.78rem;
+}
+
+/* ==========================================================================
+   Mood Subtle Indicators (แตะสีเฉพาะจุดเล็กๆ ไม่ทาทึบ)
+   ========================================================================== */
+.mood-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.mood-underline {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.mood-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 28px;
+  height: 2px;
+}
+
+/* Mood Color Assignments */
+[data-mood="fresh"] .mood-dot,
+[data-mood="fresh"] .mood-underline::after {
+  background-color: var(--mood-fresh);
+}
+
+[data-mood="sweet"] .mood-dot,
+[data-mood="sweet"] .mood-underline::after {
+  background-color: var(--mood-sweet);
+}
+
+[data-mood="confident"] .mood-dot,
+[data-mood="confident"] .mood-underline::after {
+  background-color: var(--mood-confident);
+}
+
+[data-mood="romance"] .mood-dot,
+[data-mood="romance"] .mood-underline::after {
+  background-color: var(--mood-romance);
+}
+
+.mood-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Filter Controls (สำหรับหน้าเลือกดูสินค้า)
+   ========================================================================== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--border-dark);
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+}
+
+/* ==========================================================================
+   Product Grid & Cards (Clean, Airy, Minimal)
+   ========================================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem 2.25rem;
+}
+
+.product-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.product-card:hover {
+  border-color: var(--accent-bronze);
+  transform: translateY(-4px);
+}
+
+.product-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.product-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.04);
+}
+
+.product-size-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(250, 248, 245, 0.9);
+  border: 1px solid var(--border-subtle);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+}
+
+.product-info {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.product-type {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.product-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Hero & General Structural Utilities
+   ========================================================================== */
+.hero {
+  padding: 7rem 2rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.hero-content p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin: 1.5rem 0 2.5rem;
+  max-width: 480px;
+}
+
+.hero-image {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--border-subtle);
+  padding: 1rem;
+  background-color: var(--bg-surface);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Form Inputs (สำหรับหน้าติดต่อ / สั่งซื้อ / ตะกร้า)
+   ========================================================================== */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-bronze);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: 5rem 2rem 3rem;
+  color: var(--text-secondary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.footer-brand p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  max-width: 340px;
+}
+
+.footer-heading {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--accent-bronze);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Responsive Design (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 968px) {
+  :root {
+    --section-padding: 4.5rem 1.5rem;
+  }
+
+  .hero {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-padding: 3.5rem 1.25rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .filter-bar {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

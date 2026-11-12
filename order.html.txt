@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สั่งซื้อสินค้า — Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">Body Scent</a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="order.html" class="active">สั่งซื้อสินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 3rem;">
+          <span class="eyebrow">Order &amp; Checkout</span>
+          <h1>สั่งซื้อสินค้า</h1>
+          <p>กรอกข้อมูลการจัดส่งและตรวจสอบรายการสินค้าด้านล่าง เพื่อยืนยันคำสั่งซื้อของคุณ</p>
+        </div>
+
+        <div style="max-width: 600px; margin: 0 auto; background-color: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 3rem 2.5rem;">
+          <form id="orderForm">
+            <div class="form-group">
+              <label for="customerName" class="form-label">ชื่อลูกค้า *</label>
+              <input type="text" id="customerName" class="form-control" placeholder="ระบุชื่อ - นามสกุล" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact" class="form-label">เบอร์โทร / Line ID *</label>
+              <input type="text" id="contact" class="form-control" placeholder="เช่น 081-234-5678 หรือ @lineid" required>
+            </div>
+
+            <div class="form-group">
+              <label for="items" class="form-label">รายการสินค้า *</label>
+              <input type="text" id="items" class="form-control" placeholder="ระบุชื่อสินค้าและขนาดที่ต้องการ" required>
+            </div>
+
+            <div class="form-group">
+              <label for="total" class="form-label">จำนวนเงินรวม (บาท) *</label>
+              <input type="number" id="total" class="form-control" placeholder="0" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 2.25rem;">
+              <label for="note" class="form-label">หมายเหตุ / ที่อยู่จัดส่ง</label>
+              <textarea id="note" class="form-control" rows="3" placeholder="ระบุที่อยู่จัดส่ง หรือรายละเอียดเพิ่มเติม (ถ้ามี)"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">ยืนยันสั่งซื้อ</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">Body Scent</a>
+          <p>เติมเต็มทุกความรู้สึกในแบบที่เป็นคุณ ด้วยกลิ่นหอมที่ออกแบบมาเพื่อทุกมู้ดในแต่ละวัน</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">คอลเลกชัน</h4>
+          <ul class="footer-links">
+            <li><a href="product.html?mood=fresh">Fresh — สดชื่น</a></li>
+            <li><a href="product.html?mood=sweet">Sweet — หวานละมุน</a></li>
+            <li><a href="product.html?mood=confident">Confident — มั่นใจ</a></li>
+            <li><a href="product.html?mood=romance">Romance — โรแมนติก</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">เมนูหลัก</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="product.html">สินค้าทั้งหมด</a></li>
+            <li><a href="order.html">สั่งซื้อสินค้า</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Body Scent. All rights reserved.</span>
+        <span>Minimalist Fragrance Collection</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

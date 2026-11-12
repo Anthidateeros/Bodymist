@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ขอบคุณสำหรับคำสั่งซื้อ — Body Scent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">Body Scent</a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="order.html">สั่งซื้อสินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" style="min-height: calc(100vh - 220px); display: flex; align-items: center;">
+      <div class="container">
+        <div style="max-width: 560px; margin: 0 auto; text-align: center; background-color: var(--bg-surface); border: 1px solid var(--border-subtle); padding: 4.5rem 2.5rem;">
+          <span class="eyebrow">Order Confirmed</span>
+          <h1 style="font-size: 2.5rem; margin-bottom: 1.25rem;">ขอบคุณสำหรับคำสั่งซื้อ</h1>
+          <p style="color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 0.95rem;">
+            เราได้รับข้อมูลการสั่งซื้อของคุณเรียบร้อยแล้ว ทีมงานจะรีบตรวจสอบและติดต่อกลับตามช่องทางที่ระบุไว้โดยเร็วที่สุด
+          </p>
+          <a href="index.html" class="btn">กลับหน้าแรก</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <span>&copy; 2026 Body Scent. All rights reserved.</span>
+        <span>Minimalist Fragrance Collection</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

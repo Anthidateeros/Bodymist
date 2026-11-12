@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Scent — เติมเต็มทุกความรู้สึกในแบบที่เป็นคุณ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">Body Scent</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="order.html">สั่งซื้อสินค้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (เต็มจอแรก เรียบหรู มินิมอล) -->
+    <section class="hero" style="min-height: calc(100vh - 82px); display: flex; align-items: center;">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">Body Scent Collection</span>
+            <h1>เติมเต็มทุกความรู้สึก<br>ในแบบที่เป็นคุณ</h1>
+            <p>
+              ด้วยกลิ่นหอมที่ออกแบบมาเพื่อทุกมู้ดในแต่ละวัน สัมผัสความเรียบหรูและเอกลักษณ์เฉพาะตัวที่สะท้อนตัวตนของคุณอย่างเป็นธรรมชาติ
+            </p>
+            <a href="product.html" class="btn">ดูสินค้าทั้งหมด</a>
+          </div>
+
+          <div class="hero-image">
+            <img src="images/fresh.jpg" alt="Body Scent Signature Collection">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Moods Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Discover Your Scent</span>
+          <h2>เลือกกลิ่นหอมตามมู้ดของคุณ</h2>
+          <p>ค้นพบคอลเลกชันกลิ่นหอมทั้ง 4 อารมณ์ ที่รังสรรค์ขึ้นเพื่อให้สอดคล้องกับทุกช่วงเวลาสำคัญ</p>
+        </div>
+
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          
+          <!-- Mood 1: Fresh -->
+          <a href="product.html?mood=fresh" class="product-card" data-mood="fresh" style="padding: 2.5rem 2rem;">
+            <div class="product-meta" style="margin-bottom: 1.25rem;">
+              <span class="mood-tag">
+                <span class="mood-dot"></span>01 / Fresh
+              </span>
+            </div>
+            <h3 class="mood-underline" style="margin-bottom: 1.25rem;">Fresh <span style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted); font-weight: 300;">(สดชื่น)</span></h3>
+            <p class="product-desc" style="margin-bottom: 2rem;">
+              ปลุกความกระปรี้กระเปร่าด้วยสัมผัสกลิ่นที่โปร่งโล่ง สะอาด และเบาสบาย เหมือนได้เริ่มต้นวันใหม่ท่ามกลางอากาศบริสุทธิ์
+            </p>
+            <span style="font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-bronze);">
+              เลือกชมกลิ่น Fresh &rarr;
+            </span>
+          </a>
+
+          <!-- Mood 2: Sweet -->
+          <a href="product.html?mood=sweet" class="product-card" data-mood="sweet" style="padding: 2.5rem 2rem;">
+            <div class="product-meta" style="margin-bottom: 1.25rem;">
+              <span class="mood-tag">
+                <span class="mood-dot"></span>02 / Sweet
+              </span>
+            </div>
+            <h3 class="mood-underline" style="margin-bottom: 1.25rem;">Sweet <span style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted); font-weight: 300;">(หวานละมุน)</span></h3>
+            <p class="product-desc" style="margin-bottom: 2rem;">
+              โอบกอดความรู้สึกด้วยความอ่อนโยน น่ารัก และอบอุ่นใจ ผ่านความหวานที่นุ่มนวลและแผ่วเบาอย่างเป็นธรรมชาติ
+            </p>
+            <span style="font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-bronze);">
+              เลือกชมกลิ่น Sweet &rarr;
+            </span>
+          </a>
+
+          <!-- Mood 3: Confident -->
+          <a href="product.html?mood=confident" class="product-card" data-mood="confident" style="padding: 2.5rem 2rem;">
+            <div class="product-meta" style="margin-bottom: 1.25rem;">
+              <span class="mood-tag">
+                <span class="mood-dot"></span>03 / Confident
+              </span>
+            </div>
+            <h3 class="mood-underline" style="margin-bottom: 1.25rem;">Confident <span style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted); font-weight: 300;">(มั่นใจ)</span></h3>
+            <p class="product-desc" style="margin-bottom: 2rem;">
+              เสริมบุคลิกให้ดูนิ่ง สะอาดตา และน่าเชื่อถือ พร้อมให้คุณก้าวออกไปพบปะผู้คนและรับมือกับทุกสถานการณ์ได้อย่างมืออาชีพ
+            </p>
+            <span style="font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-bronze);">
+              เลือกชมกลิ่น Confident &rarr;
+            </span>
+          </a>
+
+          <!-- Mood 4: Romance -->
+          <a href="product.html?mood=romance" class="product-card" data-mood="romance" style="padding: 2.5rem 2rem;">
+            <div class="product-meta" style="margin-bottom: 1.25rem;">
+              <span class="mood-tag">
+                <span class="mood-dot"></span>04 / Romance
+              </span>
+            </div>
+            <h3 class="mood-underline" style="margin-bottom: 1.25rem;">Romance <span style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--text-muted); font-weight: 300;">(โรแมนติก)</span></h3>
+            <p class="product-desc" style="margin-bottom: 2rem;">
+              เผยเสน่ห์ที่อบอุ่น น่าค้นหา และชวนให้จดจำ ด้วยมิติความหวานที่ลุ่มลึกและน่าหลงใหลในทุกช่วงเวลาพิเศษ
+            </p>
+            <span style="font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-bronze);">
+              เลือกชมกลิ่น Romance &rarr;
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">Body Scent</a>
+          <p>เติมเต็มทุกความรู้สึกในแบบที่เป็นคุณ ด้วยกลิ่นหอมที่ออกแบบมาเพื่อทุกมู้ดในแต่ละวัน</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">คอลเลกชัน</h4>
+          <ul class="footer-links">
+            <li><a href="product.html?mood=fresh">Fresh — สดชื่น</a></li>
+            <li><a href="product.html?mood=sweet">Sweet — หวานละมุน</a></li>
+            <li><a href="product.html?mood=confident">Confident — มั่นใจ</a></li>
+            <li><a href="product.html?mood=romance">Romance — โรแมนติก</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">เมนูหลัก</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="product.html">สินค้าทั้งหมด</a></li>
+            <li><a href="order.html">สั่งซื้อสินค้า</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Body Scent. All rights reserved.</span>
+        <span>Minimalist Fragrance Collection</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
